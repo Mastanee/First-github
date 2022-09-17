@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a639eaefff.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>⛅️weather🌧</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="searchCityForm">
+        <input  type="text" 
+        placeholder="search a city" 
+        autocomplete="off" 
+        autofocus="on" id = "searchCity"/>
+        <input type="submit" 
+        value="search" class = "searchButton">
+        <input type="submit" 
+        value="current" id = "currentButton">
+      </form>
+      <div class="containertext-center">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 11rem">
+              <img src="images/rain.jpeg" class="rainy" />
+              <div class="card-body">
+                <h5 id="currentCity">New York</h5>
+                <span id="currentDegreeToday">
+                  19
+                </span>
+                <span class="units" id="celsius">
+                  <a href=#>°C  </a>
+                </span>
+                
+                <p class="date-hoy">21 July</p>
+                <p class="time">
+                  <span id="day">Sunday </span><sapan>-
+                  <span id="timeHour">12</span>:<span id = "timeMinute">12</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1" style="width: 8rem">
+              <div class="card-body">
+                <h5 class="currentCity">Mon</h5>
+                <p class="date">22 July</p>
+                <img src="images/cloudysunny.png" class="rainy1" />
+                <p class="currentDegree">17°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="currentCity">Tue</h5>
+                <p class="date">23 July</p>
+                <img src="images/cloudy.png" class="rainy1" />
+                <p class="currentDegree">17°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="currentCity">wed</h5>
+                <p class="date">24 July</p>
+                <img src="images/sunnycloudy.png" class="rainy1" />
+                <p class="currentDegree">19°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="currentCity">Thu</h5>
+                <p class="date">25 July</p>
+                <img src="images/sunny.png" class="rainy1" />
+
+                <p class="currentDegree">20°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1" style="width: 10rem">
+              <div class="card-body">
+                <h5 class="currentCity">Fri</h5>
+
+                <p class="date">26 July</p>
+                <img src="images/cloudysunny.png" class="rainy1" />
+                <p class="currentDegree">19°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

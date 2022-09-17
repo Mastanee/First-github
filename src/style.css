@@ -1,0 +1,75 @@
+.container {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #909090;
+  border-radius: 8px;
+}
+
+#searchCity {
+  margin: 20px;
+  margin-right: 0;
+  width: 700px;
+  padding: 2px 12px;
+  border-radius: 4px;
+  border-color: blueviolet;
+}
+#currentButton {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 6px;
+  margin-left: 20px;
+}
+.searchButton {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 6px;
+  margin-left: 20px;
+}
+.card1 {
+  display: block;
+  border: none;
+  margin-top: 80px;
+}
+h5 {
+  font-size: 24px;
+  font-weight: 700;
+}
+#currentDegreeToday {
+  font-size: 28px;
+  font-weight: 700;
+}
+.date-hoy {
+  font-size: 24px;
+}
+.units {
+  position: relative;
+  top: -14px;
+  font-size: 16px;
+}
+#fahrenheit {
+  position: relative;
+  top: -14px;
+  font-size: 16px;
+}
+.cloudy {
+  color: aquamarine;
+}
+.rainy {
+  display: block;
+  margin: 20px auto;
+  width: 60px;
+}
+.rainy1 {
+  display: block;
+  margin: 20px 0;
+  width: 60px;
+}
+.card {
+  text-align: center;
+  margin: 40px 0 40px 20px;
+  position: relative;
+}
