@@ -1,78 +1,82 @@
-.container {
-  display: block;
-  margin: 20px auto;
-  border: 1px solid #909090;
-  border-radius: 8px;
+body {
+  font-family: sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-#searchCity {
-  margin: 20px;
-  margin-right: 0;
-  width: 700px;
-  padding: 2px 12px;
-  border-radius: 4px;
-  border-color: blueviolet;
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }
-#currentButton {
-  background-color: green;
-  color: white;
-  border: none;
-  padding: 5px 20px;
-  border-radius: 6px;
-  margin-left: 20px;
+.discription {
+  text-transform: capitalize;
 }
-.searchButton {
+.weather-app-container {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.weather-app {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+#city-input {
+  background-color: rgb(246, 239, 252);
+  border-style: none;
+  font-weight: 200;
+}
+#city-search {
   background-color: blueviolet;
-  color: white;
-  border: none;
-  padding: 5px 20px;
-  border-radius: 6px;
-  margin-left: 20px;
+  border-style: none;
+  font-weight: 200;
 }
-.card1 {
-  display: block;
-  border: none;
-  margin-top: 80px;
+.overview {
+  margin-bottom: 20px;
 }
-h5 {
+.city-name {
+  margin-top: 20px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 200;
+  color: rgb(84, 83, 83);
 }
-#currentDegreeToday {
-  font-size: 28px;
-  font-weight: 700;
-}
-.date-hoy {
-  font-size: 24px;
-}
-.units {
-  position: relative;
-  top: -14px;
+.todayDate {
   font-size: 16px;
+  font-weight: 100;
+  color: rgb(119, 119, 119);
 }
-#fahrenheit {
+.weather-current-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-current-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-current-temperature .units {
   position: relative;
-  top: -14px;
   font-size: 16px;
+  top: -34px;
 }
-.cloudy {
-  color: aquamarine;
+.weather-current-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
 }
-.rainy {
-  display: block;
-  margin: 20px auto;
-  width: 60px;
+.weather-current-temperature .active:hover {
+  text-decoration: none;
 }
-.rainy1 {
-  display: block;
-  margin: 20px 0;
-  width: 60px;
-}
-.card {
-  text-align: center;
-  margin: 40px 0 40px 20px;
-  position: relative;
-}
-.gitHub {
-  margin-left: 80px;
+.weather-current-temperature .fahrenhiet {
+  text-decoration: none;
 }
