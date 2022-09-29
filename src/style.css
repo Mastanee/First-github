@@ -53,8 +53,9 @@ li {
 }
 .weather-current-temperature img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 160px;
+  width: 160px;
+  margin-top: -40px;
 }
 
 .weather-current-temperature strong {
@@ -79,4 +80,7 @@ li {
 }
 .weather-current-temperature .fahrenhiet {
   text-decoration: none;
+}
+.weather-detail {
+  margin-top: 10px;
 }
