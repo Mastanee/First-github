@@ -65,5 +65,29 @@ console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemperature);
 
+function displaycelsiusTemp(event) {
+  event.preventDefault();
+  celsiusTemp.classList.add("active");
+  fahrenhietTemp.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+function displayFahrenhietTemp(event) {
+  event.preventDefault();
+  celsiusTemp.classList.remove("active");
+  fahrenhietTemp.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+let celsiusTemperature = null;
+
 let searchForm = document.querySelector("#search-input");
 searchForm.addEventListener("submit", searchCity);
+
+let fahrenhietTemp = document.querySelector("#fahrenheit");
+fahrenhietTemp.addEventListener("click", displayFahrenhietTemp);
+
+let celsiusTemp = document.querySelector("#celsius");
+celsiusTemp.addEventListener("click", displaycelsiusTemp);
