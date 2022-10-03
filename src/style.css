@@ -27,13 +27,13 @@ li {
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
-#city-input {
-  background-color: rgb(246, 239, 252);
+#city-name {
+  background-color: #ecf8fc;
   border-style: none;
   font-weight: 200;
 }
 #city-search {
-  background-color: blueviolet;
+  background-color: #fe9901;
   border-style: none;
   font-weight: 200;
 }
@@ -53,8 +53,8 @@ li {
 }
 .weather-current-temperature img {
   margin-right: 5px;
-  height: 160px;
-  width: 160px;
+  height: 120px;
+  width: 120px;
   margin-top: -40px;
 }
 
@@ -83,4 +83,19 @@ li {
 }
 .weather-detail {
   margin-top: 10px;
+}
+#discription {
+  color: #4fcaef;
+}
+#humidity {
+  color: #4fcaef;
+}
+#wind {
+  color: #4fcaef;
+}
+.precent {
+  color: #4fcaef;
+}
+.wind-unit {
+  color: #4fcaef;
 }
