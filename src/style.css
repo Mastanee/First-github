@@ -99,3 +99,18 @@ li {
 .wind-unit {
   color: #4fcaef;
 }
+.forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.forecastDay {
+  font-size: 16px;
+  color: #434545;
+}
+.weather-forecast-temperture {
+  font-size: 12px;
+  color: #fe9901;
+}
+.min-temperture {
+  color: #fbdbab;
+}
