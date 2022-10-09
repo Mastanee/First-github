@@ -21,28 +21,51 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-function showForecast() {
+
+function changeDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function showForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#weather-forecast");
-  console.log(forecastElement);
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Fri"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (dayForecast, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
   <div class="col-2">
-    <div class="forecastDay">${day}</div>
-    <img src="http://openweathermap.org/img/wn/03n@2x.png" alt="" width="48" />
+    <div class="forecastDay">${changeDay(dayForecast.dt)}</div>
+    <img src="http://openweathermap.org/img/wn/${
+      dayForecast.weather[0].icon
+    }@2x.png" alt="" width="48" />
     <div class="weather-forecast-temperture">
-      19 <span class="min-temperture">10</span>
+      ${Math.round(
+        dayForecast.temp.max
+      )}°  <span class="min-temperture">${Math.round(
+          dayForecast.temp.min
+        )}° </span>
     </div>
   </div>
 
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  let apiKey = "6d68aadfacdd4f5163bc273049a0cf2d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function displayTemperature(response) {
@@ -68,6 +91,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 
 function foundCity(city) {
