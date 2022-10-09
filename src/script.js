@@ -112,8 +112,6 @@ console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemperature);
 
-let celsiusTemperature = null;
-
 let searchForm = document.querySelector("#search-input");
 searchForm.addEventListener("submit", searchCity);
 
